@@ -20,7 +20,7 @@ read -p "Enter c to continue or q to exit:"
 #accessing the function
 your_name "$REPLY" 
 
-#output variable defined inside the function being accessed the functio.
+#output variable defined inside the function being accessed outside the function.
 if [[ $output =~ s+ ]] ; then 
 
 break 
