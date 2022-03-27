@@ -1,5 +1,5 @@
-#! /bin/bash
-if [ -z $1 ]
+#!/bin/sh
+if [[ -z $1 ]]
 then
     echo "enter the amount in minutes"
     read COUNTER
