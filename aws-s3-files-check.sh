@@ -1,11 +1,11 @@
 #!/bin/bash
 
-blue_timestamp=$(aws s3 ls s3://oce-bucket-blue/origin-conf-file/ | awk '{print $1}')
-green_timestamp=$(aws s3 ls s3://oce-bucket-green/origin-conf-file/ | awk '{print $1}')
+old_timestamp=$(aws s3 ls s3://madhu-bucket/madhu-file/ | awk '{print $1}')
+new_timestamp=$(aws s3 ls s3://madhu-bucket/madhu-file1 | awk '{print $1}')
 
 TDATE=$(date +"%Y-%m-%d")
 
-if [[ $blue_timestamp -eq $TDATE && $green_timestamp -eq $TDATE ]]
+if [[ $old_timestamp -eq $TDATE && $new_timestamp -eq $TDATE ]]
 then
    echo "OK"
 else
